@@ -21,8 +21,6 @@ jobs:
 
             - name: Publish package
               shell: bash
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
               run: |
                   if [[ "$GITHUB_REF_NAME" == *"-"* ]]; then
                       TAG="${GITHUB_REF_NAME#*-}"

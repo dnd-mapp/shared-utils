@@ -20,7 +20,7 @@ export async function tryCatch<T, E = Error>(promise: Promise<T>): Promise<Resul
 
 export function tryCatchSync<T, E = Error>(fn: () => T): Result<T, E> {
     try {
-       return { data: fn(), error: null };
+        return { data: fn(), error: null };
     } catch (error) {
         return { data: null, error: error as E };
     }

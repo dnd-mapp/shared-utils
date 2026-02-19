@@ -31,4 +31,5 @@ jobs:
                       TAG="latest"
                   fi
 
+                  pnpm prepublishOnly
                   pnpm publish --access public --no-git-checks --tag "$TAG" --dry-run

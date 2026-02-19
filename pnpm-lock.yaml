@@ -39,6 +39,7 @@ importers:
       typescript-eslint:
         specifier: ~8.55
         version: 8.55.0(eslint@10.0.0)(typescript@5.9.3)
+    publishDirectory: dist/shared-utils
 
 packages:
 

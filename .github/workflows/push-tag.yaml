@@ -10,7 +10,6 @@ jobs:
     publish:
         name: Publish
         runs-on: ubuntu-22.04
-        if: false
         steps:
             - name: Checkout repository
               uses: actions/checkout@v6

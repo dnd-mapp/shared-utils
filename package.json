@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/dnd-mapp/shared-utils/issues"
   },
-  "packageManager": "pnpm@10.29.3",
+  "packageManager": "pnpm@10.30.0",
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -32,7 +32,7 @@
   },
   "engines": {
     "node": ">=24.13.1",
-    "pnpm": ">=10.29.3"
+    "pnpm": ">=10.30.0"
   },
   "scripts": {
     "prepublishOnly": "node tools/prepublish-only.js",

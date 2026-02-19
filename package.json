@@ -26,9 +26,6 @@
       "import": "./index.js"
     }
   },
-  "files": [
-    "**/*"
-  ],
   "publishConfig": {
     "access": "public"
   },

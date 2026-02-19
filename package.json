@@ -1,0 +1,62 @@
+{
+  "name": "@dnd-mapp/shared-utils",
+  "description": "A pure TypeScript shared utility suite for D&D applications, featuring dice rolling engines, coordinate systems, and consistent business logic helpers.",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "author": "NoNamer777",
+  "homepage": "https://github.com/dnd-mapp/shared-utils",
+  "keywords": [
+    "typescript",
+    "shared-utils",
+    "esm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnd-mapp/shared-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dnd-mapp/shared-utils/issues"
+  },
+  "packageManager": "pnpm@10.29.3",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "files": [
+    "**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=24.13.1",
+    "pnpm": ">=10.29.3"
+  },
+  "scripts": {
+    "prepublishOnly": "node tools/prepublish-only.js",
+    "prebuild": "node tools/prebuild.js",
+    "build": "tsc -p tsconfig.prod.json",
+    "build-dev": "pnpm prebuild && tsc -w",
+    "format:check": "pnpm exec prettier -l .",
+    "format:write": "pnpm exec prettier -w .",
+    "lint": "pnpm exec eslint ."
+  },
+  "dependencies": {
+    "tslib": "~2.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "~9.39",
+    "@types/node": "~24.10",
+    "eslint": "~9.39",
+    "eslint-config-prettier": "~10.1",
+    "globals": "~17.3",
+    "prettier": "~3.8",
+    "prettier-plugin-organize-imports": "~4.3",
+    "typescript": "~5.9",
+    "typescript-eslint": "~8.55"
+  }
+}

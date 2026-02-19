@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- Util function wrapping a try/catch block to return the result and error as values.
+- (n/a)
 
 ### Changed
 
@@ -29,5 +29,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Security
 
 - (n/a)
+
+---
+
+## [1.0.0] - 2026-02-19
+
+### Added
+
+- Util function wrapping a try/catch block to return the result and error as values.
 
 ---

@@ -1,7 +1,7 @@
 {
   "name": "@dnd-mapp/shared-utils",
   "description": "A pure TypeScript shared utility suite for D&D applications, featuring dice rolling engines, coordinate systems, and consistent business logic helpers.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "UNLICENSED",
   "author": "NoNamer777",
   "homepage": "https://github.com/dnd-mapp/shared-utils",

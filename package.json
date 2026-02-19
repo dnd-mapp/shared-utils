@@ -27,7 +27,8 @@
     }
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "dist/shared-utils"
   },
   "engines": {
     "node": ">=24.13.1",

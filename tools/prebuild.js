@@ -6,6 +6,8 @@ async function main() {
     await rm(OUTPUT_PATH, { force: true, recursive: true });
 }
 
-main().catch((error) => {
+try {
+    await main();
+} catch (error) {
     console.error(`✗ Failed to clear output folder: ${error.message}`);
-});
+}

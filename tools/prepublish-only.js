@@ -13,9 +13,17 @@ const DIST_README_PATH = join(process.cwd(), `dist/shared-utils/${README_FILE_NA
 const DIST_PACKAGE_MANIFEST_PATH = join(process.cwd(), `dist/shared-utils/${PACKAGE_MANIFEST_FILE_NAME}`);
 const DIST_LICENCE_PATH = join(process.cwd(), `dist/shared-utils/${LICENSE_FILE_NAME}`);
 
+/**
+ * @param manifestContents {string}
+ * @return {Record<string, unknown>}
+ */
+function parsePackageManifest(manifestContents) {
+    return JSON.parse(manifestContents);
+}
+
 async function main() {
     const packageManifestContents = await readFile(PACKAGE_MANIFEST_PATH, { encoding: 'utf8' });
-    const packageManifest = JSON.parse(packageManifestContents);
+    const packageManifest = parsePackageManifest(packageManifestContents);
 
     delete packageManifest.packageManager;
     delete packageManifest.engines.pnpm;
@@ -27,7 +35,9 @@ async function main() {
     await copyFile(LICENSE_PATH, DIST_LICENCE_PATH);
 }
 
-main().catch((error) => {
+try {
+    await main();
+} catch (error) {
     console.error(`✗ PrepublishOnly failed: ${error.message}`);
     process.exit(1);
-});
+}

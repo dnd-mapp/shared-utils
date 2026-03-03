@@ -18,6 +18,10 @@ function resolvePaths() {
     };
 }
 
+/**
+ * @param paths {{ changelog: string, template: string }}
+ * @return {Promise<{changelog: string, template: string}>}
+ */
 async function readInputFiles(paths) {
     const [changelog, templateRaw] = await Promise.all([
         readFile(paths.changelog, { encoding: 'utf-8' }),
@@ -30,6 +34,10 @@ async function readInputFiles(paths) {
     };
 }
 
+/**
+ * @param changelog {string}
+ * @return {{preamble: string, body: string, afterSeparator: string}}
+ */
 function extractUnreleasedSection(changelog) {
     const unreleasedHeading = '## [Unreleased]';
     const unreleasedStart = changelog.indexOf(unreleasedHeading);
@@ -39,7 +47,7 @@ function extractUnreleasedSection(changelog) {
     }
     const contentAfterHeading = changelog.substring(unreleasedStart + unreleasedHeading.length);
 
-    const separatorMatch = contentAfterHeading.match(/^---$/m);
+    const separatorMatch = /^---$/m.exec(contentAfterHeading);
 
     if (!separatorMatch) {
         throw new Error('Could not find the --- separator after the [Unreleased] section.');
@@ -51,6 +59,10 @@ function extractUnreleasedSection(changelog) {
     };
 }
 
+/**
+ * @param unreleasedBody {string}
+ * @return {string}
+ */
 function buildReleaseNotesBody(unreleasedBody) {
     const subsectionRegex = /###\s+(.+)\n\n([\s\S]*?)(?=\n###\s|\n---|\n##\s|$)/g;
     const filteredSections = [];
@@ -70,6 +82,12 @@ function buildNewChangelog({ preamble, template, versionedSection, afterSeparato
     return `${preamble}${template}\n\n${versionedSection}\n\n---${afterSeparator}`;
 }
 
+/**
+ * @param paths {{ changelog: string, releaseNotesOutput: string }}
+ * @param newChangelog {string}
+ * @param releaseNotesBody {string}
+ * @return {Promise<void>}
+ */
 async function writeOutputFiles(paths, { newChangelog, releaseNotesBody }) {
     await Promise.all([
         writeFile(paths.changelog, newChangelog, { encoding: 'utf-8' }),
@@ -101,7 +119,9 @@ async function main() {
     console.log(`Release notes written to "${paths.releaseNotesOutput}".`);
 }
 
-main().catch((error) => {
+try {
+    await main();
+} catch (error) {
     console.error(`✗ Changelog preparation failed: ${error.message}`);
     process.exit(1);
-});
+}

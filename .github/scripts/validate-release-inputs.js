@@ -206,6 +206,8 @@ async function main() {
     }
     const manifestPath = join(process.cwd(), 'package.json');
     const manifestRaw = await readFile(manifestPath, { encoding: 'utf-8' });
+
+    /** @type {Record<string, unknown>} */
     const manifest = JSON.parse(manifestRaw);
 
     const currentVersion = manifest.version;
@@ -227,7 +229,9 @@ async function main() {
     await writeFile(githubOutput, `is-prerelease=${nextIsPrerelease}\n`, { flag: 'a' });
 }
 
-main().catch((error) => {
+try {
+    await main();
+} catch (error) {
     console.error(`\n✗ Validation failed: ${error.message}`);
     process.exit(1);
-});
+}

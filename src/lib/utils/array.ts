@@ -3,6 +3,6 @@ export function fromStringToArray(value: string | null) {
     return value.split(',');
 }
 
-export function isArrayEmpty<T>(array: T[]) {
+export function isArrayEmpty(array: unknown[]) {
     return array.length === 0;
 }

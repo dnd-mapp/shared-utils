@@ -5,33 +5,39 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default defineConfig([
-    globalIgnores(['node_modules/', 'dist/']),
+    eslint.configs.recommended,
+    tseslint.configs.recommendedTypeChecked,
+    tseslint.configs.stylisticTypeChecked,
+    globalIgnores(['node_modules/', 'dist/', 'eslint.config.mjs']),
     {
         files: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.js', '**/*.mjs', '**/*.cjs'],
-        extends: [eslint.configs.recommended, tseslint.configs.recommended, tseslint.configs.stylistic],
+        languageOptions: {
+            sourceType: 'module',
+            ecmaVersion: 2024,
+            parserOptions: {
+                projectService: {
+                    allowDefaultProject: ['*.mjs', 'tools/*.js', '.github/scripts/*.js'],
+                },
+            },
+        },
         rules: {},
     },
     {
-        files: ['.github/scripts/**/*', 'tools/**/*'],
+        files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
+        rules: {
+            '@typescript-eslint/no-unsafe-argument': 'off',
+            '@typescript-eslint/no-unsafe-assignment': 'off',
+            '@typescript-eslint/no-unsafe-return': 'off',
+        },
+    },
+    {
+        files: ['.github/scripts/*.js', 'tools/*.js'],
         languageOptions: {
             globals: {
                 ...globals.browser,
                 ...globals.node,
             },
         },
-    },
-    {
-        files: ['src/**/*'],
-        languageOptions: {
-            sourceType: 'module',
-            ecmaVersion: 2024,
-            parserOptions: {
-                ecmaFeatures: {
-                    impliedStrict: true,
-                },
-            },
-        },
-        rules: {},
     },
     eslintConfigPrettier,
 ]);

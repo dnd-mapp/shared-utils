@@ -8,13 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- Array utility function `fromStringToArray` to convert comma-separated strings into arrays.
-- Array utility function `isArrayEmpty` to check if an array is empty.
-- Number utility function `parseInteger` to parse integer values with a fallback value.
+- (n/a)
 
 ### Changed
 
-- Enable strict null checks in TypeScript configuration for improved type safety.
+- (n/a)
 
 ### Deprecated
 
@@ -31,6 +29,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Security
 
 - (n/a)
+
+---
+
+## [1.1.0] - 2026-03-03
+
+### Added
+
+- Array utility function `fromStringToArray` to convert comma-separated strings into arrays.
+- Array utility function `isArrayEmpty` to check if an array is empty.
+- Number utility function `parseInteger` to parse integer values with a fallback value.
+
+### Changed
+
+- Enable strict null checks in TypeScript configuration for improved type safety.
 
 ---
 

@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/dnd-mapp/shared-utils/issues"
   },
-  "packageManager": "pnpm@10.30.0",
+  "packageManager": "pnpm@10.30.3",
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -31,8 +31,8 @@
     "directory": "dist/shared-utils"
   },
   "engines": {
-    "node": ">=24.13.1",
-    "pnpm": ">=10.30.0"
+    "node": ">=24.14.0",
+    "pnpm": ">=10.30.3"
   },
   "scripts": {
     "prepublishOnly": "node tools/prepublish-only.js",
@@ -51,10 +51,10 @@
     "@types/node": "~24.10",
     "eslint": "~10.0",
     "eslint-config-prettier": "~10.1",
-    "globals": "~17.3",
+    "globals": "~17.4",
     "prettier": "~3.8",
     "prettier-plugin-organize-imports": "~4.3",
     "typescript": "~5.9",
-    "typescript-eslint": "~8.55"
+    "typescript-eslint": "~8.56"
   }
 }

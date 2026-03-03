@@ -8,11 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- (n/a)
+- Array utility function `fromStringToArray` to convert comma-separated strings into arrays.
+- Array utility function `isArrayEmpty` to check if an array is empty.
+- Number utility function `parseInteger` to parse integer values with a fallback value.
 
 ### Changed
 
-- (n/a)
+- Enable strict null checks in TypeScript configuration for improved type safety.
 
 ### Deprecated
 

@@ -27,7 +27,7 @@ pnpm add @dnd-mapp/shared-utils
 
 ### Requirements
 
-- **Node.js**: `~24.13` (or modern browser environments)
+- **Node.js**: `~24.14` (or modern browser environments)
 - **TypeScript**: `~5.9` (for full type-safety support)
 
 ---

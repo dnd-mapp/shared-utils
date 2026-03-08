@@ -8,11 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- (n/a)
+- Build configuration using **Vite** to bundle the library, enabling modern build tooling.
 
 ### Changed
 
-- (n/a)
+- Updated prepublish-only script to use `.mjs` extension and added a run configuration.
+- Added necessary dependencies for the Vite build process.
 
 ### Deprecated
 

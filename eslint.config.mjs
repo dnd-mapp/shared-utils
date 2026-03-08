@@ -16,7 +16,7 @@ export default defineConfig([
             ecmaVersion: 2024,
             parserOptions: {
                 projectService: {
-                    allowDefaultProject: ['*.mjs', 'tools/*.js', '.github/scripts/*.js'],
+                    allowDefaultProject: ['vite.config.ts', '*.mjs', 'tools/*.mjs', '.github/scripts/*.js'],
                 },
             },
         },
@@ -33,7 +33,7 @@ export default defineConfig([
         },
     },
     {
-        files: ['.github/scripts/*.js', 'tools/*.js'],
+        files: ['.github/scripts/*.js', 'tools/*.mjs'],
         languageOptions: {
             globals: {
                 ...globals.node,

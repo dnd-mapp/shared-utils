@@ -18,12 +18,16 @@
     "url": "https://github.com/dnd-mapp/shared-utils/issues"
   },
   "packageManager": "pnpm@10.30.3",
-  "type": "module",
   "sideEffects": false,
+  "type": "module",
+  "types": "./dist/shared-utils/index.d.ts",
+  "module": "./dist/shared-utils/index.js",
+  "main": "./dist/shared-utils/index.cjs",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
+      "types": "./dist/shared-utils/index.d.ts",
+      "import": "./dist/shared-utils/index.js",
+      "require": "./dist/shared-utils/index.cjs"
     }
   },
   "publishConfig": {
@@ -35,10 +39,9 @@
     "pnpm": ">=10.30.3"
   },
   "scripts": {
-    "prepublishOnly": "node tools/prepublish-only.js",
-    "prebuild": "node tools/prebuild.js",
-    "build": "tsc -p tsconfig.prod.json",
-    "build-dev": "pnpm prebuild && tsc -w",
+    "prepublishOnly": "node tools/prepublish-only.mjs",
+    "build": "pnpm vite build",
+    "build-dev": "pnpm vite build -w -m development",
     "format:check": "pnpm exec prettier -l .",
     "format:write": "pnpm exec prettier -w .",
     "lint": "pnpm exec eslint ."

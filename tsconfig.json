@@ -3,14 +3,12 @@
     "include": ["./src/**/*"],
     "exclude": ["./node_modules/", "./dist/", "./tools/"],
     "compilerOptions": {
-        "declaration": true,
-        "declarationMap": true,
         "forceConsistentCasingInFileNames": true,
         "importHelpers": true,
         "isolatedModules": true,
         "lib": ["ES2024"],
-        "module": "ES2022",
-        "moduleResolution": "node",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
         "newLine": "lf",
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true,
@@ -24,12 +22,11 @@
         "outDir": "./dist/shared-utils",
         "skipDefaultLibCheck": true,
         "skipLibCheck": true,
-        "sourceMap": true,
         "strictBindCallApply": true,
         "strictBuiltinIteratorReturn": true,
         "strictFunctionTypes": true,
         "strictNullChecks": true,
-        "target": "ES2024",
+        "target": "ESNext",
         "useUnknownInCatchVariables": true
     }
 }

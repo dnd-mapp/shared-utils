@@ -30,6 +30,14 @@ async function main() {
     delete packageManifest.scripts;
     delete packageManifest.devDependencies;
 
+    packageManifest.types = packageManifest.types.replace('dist/shared-utils/', '');
+    packageManifest.module = packageManifest.module.replace('dist/shared-utils/', '');
+    packageManifest.main = packageManifest.main.replace('dist/shared-utils/', '');
+
+    packageManifest.exports['.'].types = packageManifest.exports['.'].types.replace('dist/shared-utils/', '');
+    packageManifest.exports['.'].import = packageManifest.exports['.'].import.replace('dist/shared-utils/', '');
+    packageManifest.exports['.'].require = packageManifest.exports['.'].require.replace('dist/shared-utils/', '');
+
     await writeFile(DIST_PACKAGE_MANIFEST_PATH, JSON.stringify(packageManifest, null, 2), { encoding: 'utf8' });
     await copyFile(PACKAGE_README_PATH, DIST_README_PATH);
     await copyFile(LICENSE_PATH, DIST_LICENCE_PATH);

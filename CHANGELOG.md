@@ -8,12 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- Build configuration using **Vite** to bundle the library, enabling modern build tooling.
+- (n/a)
 
 ### Changed
 
-- Updated prepublish-only script to use `.mjs` extension and added a run configuration.
-- Added necessary dependencies for the Vite build process.
+- (n/a)
 
 ### Deprecated
 
@@ -30,6 +29,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Security
 
 - (n/a)
+
+---
+
+## [1.2.0] - 2026-03-08
+
+### Added
+
+- Build configuration using **Vite** to bundle the library, enabling modern build tooling.
+
+### Changed
+
+- Updated prepublish-only script to use `.mjs` extension and added a run configuration.
+- Added necessary dependencies for the Vite build process.
 
 ---
 

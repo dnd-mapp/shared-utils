@@ -7,6 +7,8 @@
 *.js            text eol=lf
 *.json          text eol=lf
 *.md            text eol=lf
+*.yaml          text eol=lf
+*.yml           text eol=lf
 
 # pnpm lockfile
 pnpm-lock.yaml  text eol=lf

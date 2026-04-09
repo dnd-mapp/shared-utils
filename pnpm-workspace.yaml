@@ -1,28 +1,13 @@
+packages:
+    - '!dist/**/*'
 blockExoticSubdeps: true
-
-engineStrict: true
-
-executionEnv:
-    nodeVersion: 24.14.0
-
 ignoreDepScripts: true
-
-ignoreScripts: true
-
+managePackageManagerVersions: false
 minimumReleaseAge: 2880
-
-nodeVersion: 24.14.0
-
 packageManagerStrictVersion: true
-
 savePrefix: '~'
-
 strictDepBuilds: true
-
+strictPeerDependencies: true
 trustPolicy: no-downgrade
-
 trustPolicyIgnoreAfter: 10080
-
-useNodeVersion: 24.14.0
-
 verifyDepsBeforeRun: prompt

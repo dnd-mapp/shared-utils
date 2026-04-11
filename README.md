@@ -20,7 +20,7 @@ The core utility library for the D&D Mapp platform. This package provides a coll
 
 ### Prerequisites
 
-This project uses [mise-en-place](https://mise.jdx.dev/) to manage runtime versions.
+This project uses [mise-en-place](https://mise.jdx.dev/) to manage runtime versions. See the [Mise Configuration Guide](https://github.com/dnd-mapp/.github/blob/main/docs/mise-configuration.md) for global setup instructions.
 
 1. **Install Mise** to automatically manage:
   - **Node.js**: v24.14.0

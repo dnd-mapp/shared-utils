@@ -48,6 +48,11 @@
         "name": "pnpm",
         "version": "10.33.0",
         "onFail": "error"
+      },
+      {
+        "name": "npm",
+        "version": "~11.12.1",
+        "onFail": "warn"
       }
     ]
   },

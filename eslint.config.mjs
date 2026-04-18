@@ -8,7 +8,7 @@ export default defineConfig([
     eslint.configs.recommended,
     tseslint.configs.recommendedTypeChecked,
     tseslint.configs.stylisticTypeChecked,
-    globalIgnores(['node_modules/', 'dist/', 'eslint.config.mjs']),
+    globalIgnores(['node_modules/', 'dist/', 'coverage/', 'reports/', 'eslint.config.mjs']),
     {
         files: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.js', '**/*.mjs', '**/*.cjs'],
         languageOptions: {

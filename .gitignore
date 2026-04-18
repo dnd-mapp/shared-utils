@@ -15,6 +15,8 @@ dist/
 node_modules/
 
 # Miscellaneous
+coverage/
+reports/
 
 # System files
 .DS_Store

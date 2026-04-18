@@ -8,6 +8,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- (n/a)
+
+### Changed
+
+- (n/a)
+
+### Deprecated
+
+- (n/a)
+
+### Removed
+
+- (n/a)
+
+### Fixed
+
+- (n/a)
+
+### Security
+
+- (n/a)
+
+---
+
+## [1.3.0] - 2026-04-18
+
+### Added
+
 - Time utility `convertTime` with `TimeUnits` constants for converting between milliseconds, seconds, minutes, hours, days, and weeks.
 - Array utility `parseArrayFromString` to split a comma-separated string into an array, with a fallback for empty/missing values.
 - Vitest testing infrastructure with V8 coverage reporting, HTML report generation, and 80% coverage thresholds.
@@ -30,14 +58,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Removed
 
 - `docs/release-notes-template.md` — moved to `docs/` under shared repository.
-
-### Deprecated
-
-- (n/a)
-
-### Security
-
-- (n/a)
 
 ---
 

@@ -1,9 +1,31 @@
 /// <reference types="vitest/config" />
-import { defineConfig } from 'vite';
+import { readFile, writeFile } from 'fs/promises';
+import { defineConfig, Plugin } from 'vite';
 import dtsPlugin from 'vite-plugin-dts';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 const outDir = './dist/shared-utils';
 const isCI = Boolean(process.env['CI']);
+
+function generatePackageJson(outDir: string): Plugin {
+    return {
+        name: 'generate-package-json',
+        async closeBundle() {
+            const raw = await readFile('./package.json', 'utf-8');
+            const { scripts, packageManager, devEngines, publishConfig, devDependencies, ...rest } = JSON.parse(raw);
+
+            const distPkg = {
+                ...rest,
+                exports: { '.': { import: './index.js', require: './index.cjs', types: './index.d.ts' } },
+                main: './index.cjs',
+                module: './index.js',
+                types: './index.d.ts',
+            };
+
+            await writeFile(`${outDir}/package.json`, JSON.stringify(distPkg, null, 2) + '\n');
+        },
+    };
+}
 
 export default defineConfig(({ mode }) => {
     const isProduction = mode === 'production';
@@ -21,7 +43,16 @@ export default defineConfig(({ mode }) => {
             outDir: outDir,
             sourcemap: !isProduction,
         },
-        plugins: [dtsPlugin({ rollupTypes: true, tsconfigPath: './tsconfig.json' })],
+        plugins: [
+            generatePackageJson(outDir),
+            dtsPlugin({ rollupTypes: true, tsconfigPath: './tsconfig.json' }),
+            viteStaticCopy({
+                targets: [
+                    { src: 'src/README.md', dest: '.', rename: { stripBase: true } },
+                    { src: 'LICENSE', dest: '.' },
+                ],
+            }),
+        ],
         test: {
             clearMocks: true,
             coverage: {

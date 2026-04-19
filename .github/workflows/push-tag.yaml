@@ -21,5 +21,3 @@ jobs:
 
             - name: Publish package
               uses: dnd-mapp/.github/.github/actions/publish-npm-package@f41a6251f959b29201d2b8a77da6ae8f1c8bf40d
-              with:
-                  pre-publish-command: pnpm prepublishOnly

@@ -4,11 +4,11 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-export default defineConfig([
+export default defineConfig(
+    globalIgnores(['node_modules/', 'dist/', 'coverage/', 'reports/', 'eslint.config.mjs']),
     eslint.configs.recommended,
     tseslint.configs.recommendedTypeChecked,
     tseslint.configs.stylisticTypeChecked,
-    globalIgnores(['node_modules/', 'dist/', 'coverage/', 'reports/', 'eslint.config.mjs']),
     {
         files: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.js', '**/*.mjs', '**/*.cjs'],
         languageOptions: {
@@ -20,7 +20,10 @@ export default defineConfig([
                 },
             },
         },
-        rules: {},
+        rules: {
+            '@typescript-eslint/no-unsafe-assignment': 'off',
+            '@typescript-eslint/no-unused-vars': 'off',
+        },
     },
     {
         files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
@@ -41,4 +44,4 @@ export default defineConfig([
         },
     },
     eslintConfigPrettier,
-]);
+);

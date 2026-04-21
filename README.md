@@ -90,6 +90,12 @@ shared-utils/
 
 ---
 
+## 🚀 Release Pipeline
+
+For details on how releases are triggered, versioned, and published, see the [Release Pipeline](https://github.com/dnd-mapp/.github/blob/main/docs/release-pipeline.md) guide.
+
+---
+
 ## ⚖️ License
 
 Copyright © 2026 NoNamer777. All rights reserved.

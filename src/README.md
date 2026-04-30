@@ -1,7 +1,7 @@
 # @dnd-mapp/shared-utils
 
 [![NPM Version](https://img.shields.io/npm/v/@dnd-mapp/shared-utils)](https://www.npmjs.com/package/@dnd-mapp/shared-utils)
-![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Type: Module](https://img.shields.io/badge/Type-ESM-blue.svg)
 
 The core utility library for the **D&D Mapp** platform. This package provides a centralized collection of TypeScript functions, constants, and business logic used across both frontend and backend services to ensure logic parity.
@@ -63,6 +63,4 @@ This package is marked as `sideEffects: false`, allowing for optimal tree-shakin
 
 ## ⚖️ License
 
-**Copyright © 2026 NoNamer777. All rights reserved.**
-
-This software is **proprietary**. Unauthorized copying, modification, or distribution is strictly prohibited. Usage is restricted to authorized D&D Mapp applications and services.
+Released under the [MIT License](../LICENSE). Copyright © 2026 D&D Mapp.

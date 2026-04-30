@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+---
+
+## [2.0.0] - 2026-04-30
+
 ### Added
 
 - JSDoc comments with `@param`, `@returns`, `@throws`, and `@example` tags on every exported symbol in `array.ts`, `number.ts`, `time.ts`, and `try-catch.ts`.
@@ -31,7 +35,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Security
 
 - (n/a)
-
 ---
 
 ## [1.3.0] - 2026-04-18

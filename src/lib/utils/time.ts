@@ -1,3 +1,10 @@
+/**
+ * Canonical string tokens for each supported time unit, ordered from largest
+ * (weeks) to smallest (milliseconds).
+ *
+ * Use these constants as the `source` / `target` arguments to {@link convertTime}
+ * instead of raw strings to avoid typos and benefit from type-checking.
+ */
 export const TimeUnits = {
     MILLISECONDS: 'ms',
     SECONDS: 's',
@@ -38,6 +45,28 @@ function weeksToDays(weeks: number) {
     return weeks * 7;
 }
 
+/**
+ * Converts a time value from one unit to another.
+ *
+ * Conversion only supports upward direction (larger → smaller), e.g. weeks →
+ * days or hours → milliseconds. Attempting to convert in the downward direction
+ * (e.g. milliseconds → seconds) throws an error because the result would not be
+ * representable as a whole number in all cases.
+ *
+ * Both `source` and `target` default to `TimeUnits.MILLISECONDS`, so calling
+ * `convertTime(n)` returns `n` unchanged.
+ *
+ * @param value - The numeric time value to convert.
+ * @param source - The unit of the input value. Defaults to `'ms'`.
+ * @param target - The unit of the output value. Defaults to `'ms'`.
+ * @returns The converted time value as a number.
+ * @throws {Error} When `source` is a smaller unit than `target`.
+ *
+ * @example
+ * convertTime(1, TimeUnits.WEEKS, TimeUnits.DAYS);         // 7
+ * convertTime(1, TimeUnits.HOURS, TimeUnits.MILLISECONDS); // 3_600_000
+ * convertTime(1, TimeUnits.SECONDS, TimeUnits.MINUTES);    // throws
+ */
 export function convertTime(
     value: number,
     source: TimeUnit = TimeUnits.MILLISECONDS,

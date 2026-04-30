@@ -8,11 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- (n/a)
+- JSDoc comments with `@param`, `@returns`, `@throws`, and `@example` tags on every exported symbol in `array.ts`, `number.ts`, `time.ts`, and `try-catch.ts`.
 
 ### Changed
 
-- (n/a)
+- License changed from proprietary to **MIT**; updated `LICENSE`, `package.json` `license` field, and the badge and section in `src/README.md`.
+- Removed `scope=@dnd-mapp` from `.npmrc` (no longer needed).
 
 ### Deprecated
 
@@ -20,7 +21,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Removed
 
-- (n/a)
+- `fromStringToArray` from `array.ts` — superseded by `parseArrayFromString`.
+- `CONTRIBUTING.md` — content moved to the centralised shared repository docs.
 
 ### Fixed
 

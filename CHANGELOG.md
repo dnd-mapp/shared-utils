@@ -6,6 +6,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+- (n/a)
+
+### Changed
+
+- Bumped dev dependencies: `@microsoft/api-extractor` to `~7.58.7`, `@vitest/coverage-v8` and `@vitest/ui` to `~4.1.5`, `eslint` to `~10.2.1`, `typescript-eslint` to `~8.59.1`, `vite` to `~8.0.10`, `vite-plugin-static-copy` to `~4.1.0`, and `vitest` to `~4.1.5`.
+
+### Deprecated
+
+- (n/a)
+
+### Removed
+
+- (n/a)
+
+### Fixed
+
+- (n/a)
+
+### Security
+
+- (n/a)
+
 ---
 
 ## [2.0.0] - 2026-04-30
@@ -19,22 +43,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - License changed from proprietary to **MIT**; updated `LICENSE`, `package.json` `license` field, and the badge and section in `src/README.md`.
 - Removed `scope=@dnd-mapp` from `.npmrc` (no longer needed).
 
-### Deprecated
-
-- (n/a)
-
 ### Removed
 
 - `fromStringToArray` from `array.ts` — superseded by `parseArrayFromString`.
 - `CONTRIBUTING.md` — content moved to the centralised shared repository docs.
 
-### Fixed
-
-- (n/a)
-
-### Security
-
-- (n/a)
 ---
 
 ## [1.3.0] - 2026-04-18

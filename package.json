@@ -71,20 +71,20 @@
   },
   "devDependencies": {
     "@eslint/js": "~10.0.1",
-    "@microsoft/api-extractor": "~7.58.2",
+    "@microsoft/api-extractor": "~7.58.7",
     "@types/node": "~24.12.2",
-    "@vitest/coverage-v8": "~4.1.4",
-    "@vitest/ui": "~4.1.4",
-    "eslint": "~10.2.0",
+    "@vitest/coverage-v8": "~4.1.5",
+    "@vitest/ui": "~4.1.5",
+    "eslint": "~10.2.1",
     "eslint-config-prettier": "~10.1.8",
     "globals": "~17.5.0",
     "prettier": "~3.8.3",
     "prettier-plugin-organize-imports": "~4.3.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "~8.58.2",
-    "vite": "~8.0.8",
+    "typescript-eslint": "~8.59.1",
+    "vite": "~8.0.10",
     "vite-plugin-dts": "~4.5.4",
-    "vite-plugin-static-copy": "~4.0.1",
-    "vitest": "~4.1.4"
+    "vite-plugin-static-copy": "~4.1.0",
+    "vitest": "~4.1.5"
   }
 }

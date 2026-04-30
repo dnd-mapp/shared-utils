@@ -2,7 +2,7 @@
 
 ![CI Status](https://github.com/dnd-mapp/shared-utils/actions/workflows/push-main.yaml/badge.svg)
 ![NPM Version](https://img.shields.io/npm/v/@dnd-mapp/shared-utils)
-![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 The core utility library for the D&D Mapp platform. This package provides a collection of shared TypeScript functions, constants, and business logic helpers used across the entire D&D Mapp ecosystem.
 

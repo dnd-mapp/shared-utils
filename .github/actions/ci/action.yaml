@@ -4,7 +4,7 @@ runs:
     using: composite
     steps:
         - name: Set up tools
-          uses: dnd-mapp/.github/.github/actions/setup-tools@9a4924a69aa8b6c62d5cb35240ed4fa00c979c6d
+          uses: dnd-mapp/.github/.github/actions/setup-tools@49f027b3767592493f303f51af1b4a241f87e22b
 
         - name: Check formatting
           shell: bash
